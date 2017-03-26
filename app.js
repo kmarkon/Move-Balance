@@ -1,6 +1,6 @@
-//show introdaction
+//show section1
 $(function(){
-var $p=$(".introduction p");
+var $p=$(".section1 p");
   $p.slideToggle( 2000, "linear" );
 
 // slideToggle lists
@@ -9,7 +9,7 @@ $mainLi.on('click',function(){
   $(this).children().slideToggle();
 });
 // sticky menu
-var $header=$(".header");
+var $header=$("header");
 var $Top=$header.offset();
 var $Top = $Top.top;
 var $Logo=$('.logo');
