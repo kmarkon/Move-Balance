@@ -1,13 +1,20 @@
-//show section1
 $(function(){
-var $p=$(".section1 p");
-  $p.slideToggle( 2000, "linear" );
+  //show section1
+// var $p=$(".section1 p");
+//   $p.slideToggle( 2000, "linear" );
 
 // slideToggle lists
 var $mainLi=$('.mainLi').find("li")
-$mainLi.on('click',function(){
-  $(this).children().slideToggle();
+// $mainLi.on('click',function(){
+//   $(this).children().slideToggle();
+// });
+$mainLi.on('mouseenter',function(){
+  $(this).children().slideDown();
 });
+$mainLi.on('mouseleave',function(){
+  $(this).children().slideUp();
+});
+
 // sticky menu
 var $header=$("header");
 var $Top=$header.offset();
