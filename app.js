@@ -1,7 +1,5 @@
 $(function(){
-  //show section1
-// var $p=$(".section1 p");
-//   $p.slideToggle( 2000, "linear" );
+
 
 // slideToggle lists
 var $mainLi=$('.mainLi').find("li")
@@ -39,6 +37,14 @@ $(window).scroll(function (event){
     .css('height','160px');
   };
 });
+
+//sections2, section4
+var $section2=$(".section2");
+    $section2.hide();
+    $section2.show(4000);
+var $section4=$(".section4");
+    $section4.hide();
+    $section4.show(4000);
 
 
 
