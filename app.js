@@ -25,20 +25,20 @@ $(window).scroll(function (event){
     $header
     .addClass("sticky")
     .css("background-color",'white');
-    $Logo/*zmiana logo na mniejsze*/
-    .css("background-image", 'url("images/move-balance2.png")')
-    .addClass('newLogo')
-    .css('height','70px');
+    // $Logo/*zmiana logo na mniejsze*/
+    // .css("background-image", 'url("images/move-balance2.png")')
+    // .addClass('newLogo')
+    // .css('height','100%');
   }else{
     $header.removeClass("sticky");
-    $Logo
-    .css("background-image", 'url("images/move-balance.png")')
-    .removeClass('newLogo')
-    .css('height','160px');
+    // $Logo
+    // .css("background-image", 'url("images/move-balance.png")')
+    // css.removeClass('newLogo');
+    // .css('height','100%');
   };
 });
 
-//sections2, section4
+// sections2, section4
 var $section2=$(".section2");
     $section2.hide();
     $section2.show(4000);
