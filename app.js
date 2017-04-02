@@ -41,10 +41,10 @@ $(window).scroll(function (event){
 // sections2, section4
 var $section2=$(".section2");
     $section2.hide();
-    $section2.show(4000);
+    $section2.show(1500);
 var $section4=$(".section4");
     $section4.hide();
-    $section4.show(4000);
+    $section4.show(1500);
 
 
 
