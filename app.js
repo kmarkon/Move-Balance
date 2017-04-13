@@ -1,7 +1,7 @@
 $(function(){
 
 /*slideToggle lists*/
-var $mainLi=$('.mainLi').find("li")
+var $mainLi=$('.mainLi').find("a")
   $mainLi.on('mouseenter',function(){
     $(this).children().slideDown();
   });
