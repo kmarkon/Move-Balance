@@ -25,7 +25,7 @@ $(window).scroll(function (event){
     $header.removeClass("sticky");
   };
 });
-/*section1_servicios, section1_nosotros*/
+/*section1_servicios, section1_nosotros. section1_contacto*/
 var $section1_servicios=$(".section1_servicios");
   $section1_servicios.hide();
   $section1_servicios.show(1500);
@@ -33,6 +33,10 @@ var $section1_servicios=$(".section1_servicios");
   var $section1_nosotros=$(".section1_nosotros");
   $section1_nosotros.hide();
   $section1_nosotros.show(1500);
+
+  var $section1_contacto=$(".section1_contacto");
+  $section1_contacto.hide();
+  $section1_contacto.show(1500);
 
 /*sections2, section4*/
 
