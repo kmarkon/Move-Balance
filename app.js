@@ -47,7 +47,7 @@ var $section1_servicios=$(".section1_servicios");
   var $section4=$(".section4");
     $section4.hide();
 
-  var $Section4position=$(".section4").offset.top;/*pobieranie pozycji elementu*/
+  var $Section4position=$(".section4").offset().top;/*pobieranie pozycji elementu*/
     $(window).scroll(function(){
       if (document.body.scrollTop >$Section4position|| document.documentElement.scrollTop > $Section4position) {
             $section4.show(2000);
