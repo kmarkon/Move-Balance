@@ -61,10 +61,15 @@ if($section4.length==1){/*sprawdzanie czy na danej podstronie istnieje section4*
 var $bar=$("#bars");
 var $menu=$(".menu");
 
-  $bar.on('click',function(){
+    $bar.on('click',function(){
     $menu.toggleClass("mobile");
   });
-
+var $sub=$(".submenu").find("a");
+  $sub.on("click",function(){
+  var $submenu=$(".submenu");
+  $submenu.slideUp();
+  $menu.removeClass("mobile");
+})
 
 });/*koniec function*/
 
