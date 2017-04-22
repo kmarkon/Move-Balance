@@ -1,13 +1,14 @@
 $(function(){
 
 /*slideToggle lists*/
-var $mainLi=$('.mainLi').find("a")
-  $mainLi.on('mouseenter',function(){
-    $(this).children().slideDown();
+var $mainLi=$('.mainLi').find("a.sub");
+// console.log($mainLi);
+
+  $mainLi.on('click',function(e){
+    e.preventDefault();
+    $(this).next().slideToggle();
   });
-  $mainLi.on('mouseleave',function(){
-    $(this).children().slideUp();
-  });
+
 
 /*sticky menu*/
 var $header=$("header");
@@ -44,44 +45,48 @@ var $section1_servicios=$(".section1_servicios");
     $section2.hide();
     $section2.show(1500);
 
-  var $section4=$(".section4");
-    $section4.hide();
 
-  var $Section4position=$(".section4").offset().top;/*pobieranie pozycji elementu*/
+  var $section4=$(".section4");
+if($section4.length==1){/*sprawdzanie czy na danej podstronie istnieje section4*/
+    $section4.hide();
+    var $Section4position=$(".section4").offset().top;/*pobieranie pozycji elementu*/
     $(window).scroll(function(){
       if (document.body.scrollTop >$Section4position|| document.documentElement.scrollTop > $Section4position) {
             $section4.show(2000);
     };
 });/*koniec scroll section4*/
+}
 
 /*Menu bars*/
-// var $bar=$("#bars");
-// var $menu=$(".menu");
-// $menu.hide();
-//   $bar.on('click',function(){
-//     $menu.slideToggle();
-//   });
+var $bar=$("#bars");
+var $menu=$(".menu");
+
+  $bar.on('click',function(){
+    $menu.toggleClass("mobile");
+  });
+
 
 });/*koniec function*/
 
   document.addEventListener("DOMContentLoaded", function(){
   /*slider nosotros*/
 
-  var slideIndex=0;
-  carousel();
-  function carousel(){
-    var i;
-    var li=document.querySelectorAll(".slider_nosotros li");
-
-      for(i=0; i<li.length; i++){
-        li[i].style.display="none";
+    var slideIndex=0;
+    carousel();
+    function carousel(){
+      var i;
+      var li=document.querySelectorAll(".slider_nosotros li");
+      var ul=document.querySelectorAll(".slider_nosotros");
+      if(ul.length==1){/*sprawdzanie czy na danej podstronie istnieje slider_nosotros*/
+        for(i=0; i<li.length; i++){
+          li[i].style.display="none";
+        }
+        slideIndex++;
+        if(slideIndex>li.length){
+          slideIndex=1;
+        }
+        li[slideIndex-1].style.display="block";
+        setTimeout(carousel,2500);
       }
-      slideIndex++;
-      if(slideIndex>li.length){
-        slideIndex=1;
-      }
-      li[slideIndex-1].style.display="block";
-      setTimeout(carousel,2500);
     }
-
   })
