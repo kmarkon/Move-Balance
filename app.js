@@ -2,10 +2,11 @@ $(function() {
 
   /*slideToggle lists*/
   var $mainLi = $('.mainLi').find("a.sub");
-  // console.log($mainLi);
+
 
   $mainLi.on('click', function(e) {
     e.preventDefault();
+    var $submenu=$(".submenu");
     $(this).next().slideToggle();
   });
 
@@ -60,11 +61,12 @@ $(function() {
   /*Menu bars*/
   var $bar = $("#bars");
   var $menu = $(".menu");
+  console.log($menu);
 
   $bar.on('click', function() {
     $menu.toggleClass("mobile");
   });
-  var $sub = $(".submenu").find("a");
+  var $sub = $(".submenu").find("li");
   $sub.on("click", function() {
     var $submenu = $(".submenu");
     $submenu.slideUp();
